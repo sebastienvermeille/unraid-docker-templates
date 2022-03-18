@@ -28,7 +28,7 @@
         <Publish>
             <Port>
                 <HostPort>8080</HostPort>
-                <ContainerPort>80</ContainerPort>
+                <ContainerPort>7777</ContainerPort>
                 <Protocol>tcp</Protocol>
             </Port>
         </Publish>
@@ -42,8 +42,8 @@
     </Data>
     <Environment/>
     <Labels/>
-    <Config Name="Host Port" Target="8080" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always"
-            Required="true" Mask="false">80</Config>
+    <Config Name="Host Port" Target="8080" Default="7777" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always"
+            Required="true" Mask="false">7777</Config>
     <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/karipitan" Mode="rw"
             Description="Container Path: /config"
             Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/karipitan</Config>
