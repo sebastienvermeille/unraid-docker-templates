@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>sonos2mqtt</Name>
+    <Repository>https://github.com/svrooij/sonos2mqtt</Repository>
+    <Registry>https://hub.docker.com/r/svrooij/sonos2mqtt</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Privileged>false</Privileged>
+    <Support>https://svrooij.github.io/sonos2mqtt</Support>
+    <Project/>
+    <Overview>
+        Bridge between Sonos and mqtt server
+        Provide features like notifications or text-to-speech, publish sonos status to mqtt and so on.
+    </Overview>
+    <Category>HomeAutomation:</Category>
+    <WebUI>https://[IP]:[PORT:8080]</WebUI>
+    <TemplateURL/>
+    <Icon>https://raw.githubusercontent.com/sebastienvermeille/unraid-docker-templates/main/images/mqtt2sonos_icon.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <DateInstalled>1527397055</DateInstalled>
+    <DonateText/>
+    <DonateLink/>
+    <DonateImg/>
+    <MinVer/>
+    <Description>Todo</Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>6329</HostPort>
+                <ContainerPort>6329</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/sonos2mqtt</HostDir>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment/>
+    <Labels/>
+    <Config Name="Host Port" Target="6329" Default="6329" Mode="tcp" Description="Container Port: 6329" Type="Port" Display="always"
+            Required="true" Mask="false">6329</Config>
+    <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/sonos2mqtt" Mode="rw"
+            Description="Container Path: /config"
+            Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/sonos2mqtt</Config>
+</Container>
