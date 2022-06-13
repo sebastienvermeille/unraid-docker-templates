@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>sonos2mqtt</Name>
-    <Repository>https://github.com/svrooij/sonos2mqtt</Repository>
-    <Registry>https://hub.docker.com/r/svrooij/sonos2mqtt</Registry>
+    <Registry>https://hub.docker.com/r/svrooij/</Registry>
+    <Repository>svrooij/sonos2mqtt</Repository>
+    <Github>https://github.com/svrooij/sonos2mqtt</Github>
     <Network>bridge</Network>
     <MyIP/>
     <Privileged>false</Privileged>
