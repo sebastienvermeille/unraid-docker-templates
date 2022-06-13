@@ -38,7 +38,7 @@
     <Data>
         <Volume>
             <HostDir>/mnt/user/appdata/sonos2mqtt</HostDir>
-            <ContainerDir>/config</ContainerDir>
+            <ContainerDir>/data</ContainerDir>
             <Mode>rw</Mode>
         </Volume>
     </Data>
@@ -46,6 +46,21 @@
     <Labels/>
     <Config Name="Host Port" Target="6329" Default="6329" Mode="tcp" Description="Container Port: 6329" Type="Port" Display="always"
             Required="true" Mask="false">6329</Config>
+    <Config Name="IP of one known sonos speaker" Target="SONOS2MQTT_DEVICE" Default=""
+            Description="(device discovery doesnt always work inside docker)" Type="Variable" Display="always" Required="true"
+            Mask="false"></Config>
+    <Config Name="Mqtt connection string" Target="SONOS2MQTT_MQTT" Default=""
+            Description="mqtt(s)://[user]:[password]@[host]:[port]" Type="Variable" Display="always" Required="true"
+            Mask="false"></Config>
+    <Config Name="Publish distinct (optional)" Target="SONOS2MQTT_DISTINCT" Default="true"
+            Description="Publish distinct or not" Type="Variable" Display="advanced" Required="false"
+            Mask="false">true</Config>
+    <Config Name="Ip of the docker" Target="SONOS_LISTENER_HOST" Default=""
+            Description="" Type="Variable" Display="always" Required="true"
+            Mask="false"></Config>
+    <Config Name="Text to speech endpoint url (optional)" Target="SONOS_TTS_ENDPOINT" Default=""
+            Description="" Type="Variable" Display="always" Required="false"
+            Mask="false"></Config>
     <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/sonos2mqtt" Mode="rw"
             Description="Container Path: /config"
             Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/sonos2mqtt</Config>
