@@ -14,7 +14,7 @@
         Provide features like notifications or text-to-speech, publish sonos status to mqtt and so on.
     </Overview>
     <Category>HomeAutomation:</Category>
-    <WebUI>https://[IP]:[PORT:8080]</WebUI>
+    <WebUI>http://[IP]:[PORT:8080]/status</WebUI>
     <TemplateURL/>
     <Icon>https://raw.githubusercontent.com/sebastienvermeille/unraid-docker-templates/main/images/mqtt2sonos_icon.png</Icon>
     <ExtraParams/>
@@ -24,7 +24,8 @@
     <DonateLink/>
     <DonateImg/>
     <MinVer/>
-    <Description>Todo</Description>
+    <Description>It is very important to set the `Ip of this docker (sonos listener host)` field correctly otherwise the web
+        ui won't work. (You can run this container without then grab the ip edit and set it)</Description>
     <Networking>
         <Mode>bridge</Mode>
         <Publish>
@@ -55,13 +56,16 @@
     <Config Name="Publish distinct (optional)" Target="SONOS2MQTT_DISTINCT" Default="true"
             Description="Publish distinct or not" Type="Variable" Display="advanced" Required="false"
             Mask="false">true</Config>
-    <Config Name="Ip of the docker" Target="SONOS_LISTENER_HOST" Default=""
+    <Config Name="Ip of this docker (sonos listener host)" Target="SONOS_LISTENER_HOST" Default=""
             Description="" Type="Variable" Display="always" Required="true"
-            Mask="false"></Config>
-    <Config Name="Text to speech endpoint url (optional)" Target="SONOS_TTS_ENDPOINT" Default=""
-            Description="" Type="Variable" Display="always" Required="false"
             Mask="false"></Config>
     <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/sonos2mqtt" Mode="rw"
             Description="Container Path: /config"
             Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/sonos2mqtt</Config>
+    <Config Name="Text to speech endpoint url (optional)" Target="SONOS_TTS_ENDPOINT" Default=""
+            Description="" Type="Variable" Display="always" Required="false"
+            Mask="false"></Config>
+    <Config Name="Text to speech language (optional)" Target="SONOS_TTS_LANG" Default="en-US"
+            Description="" Type="Variable" Display="always" Required="false"
+            Mask="false"></Config>
 </Container>
