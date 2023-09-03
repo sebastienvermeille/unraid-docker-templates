@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>RIKA2MQTT</Name>
+    <Repository>cookiecodedev/rika2mqtt</Repository>
+    <Registry>https://hub.docker.com/r/cookiecodedev/rika2mqtt</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://forums.unraid.net/topic/144581-support-rika2mqtt/</Support>
+    <Project>https://rika2mqtt.cookiecode.dev/</Project>
+    <Overview>Rika2Mqtt is a free and opensource bridge enabling end-users to connect their RIKA firenet stove to an MQTT server. &#xD;
+        It goes both way so you can monitor and also take control of your stove directly via MQTT.</Overview>
+    <Category>HomeAutomation:</Category>
+    <WebUI/>
+    <TemplateURL/>
+    <Icon>https://raw.githubusercontent.com/sebastienvermeille/unraid-docker-templates/main/images/rika2mqtt-128x128.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DateInstalled>1693728389</DateInstalled>
+    <DonateText/>
+    <DonateLink/>
+    <Requires/>
+    <Config Name="RIKA Firenet email" Target="RIKA_EMAIL" Default="" Mode="" Description="Your rika-firenet.com account email" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="RIKA Firenet password" Target="RIKA_PASSWORD" Default="" Mode="" Description="Your rika-firenet.com account password" Type="Variable" Display="always" Required="true" Mask="true"/>
+    <Config Name="MQTT server" Target="MQTT_HOST" Default="" Mode="" Description="The host of your MQTT instance (ip of fqdn)" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="MQTT port" Target="MQTT_PORT" Default="1883" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
+    <Config Name="MQTT username" Target="MQTT_USERNAME" Default="" Mode="" Description="If your mqtt server allow anonymous access leave empty" Type="Variable" Display="always" Required="false" Mask="false"/>
+    <Config Name="MQTT password" Target="MQTT_PASSWORD" Default="" Mode="" Description="If your mqtt server allow anonymous access leave empty" Type="Variable" Display="always" Required="false" Mask="true"/>
+    <Config Name="MQTT telemetry topic name" Target="MQTT_TELEMETRY_REPORT_TOPIC_NAME" Default="tele/rika2mqtt" Mode="" Description="The topic used by RIKA2MQTT to publish RIKA status" Type="Variable" Display="advanced" Required="false" Mask="false">tele/rika2mqtt</Config>
+    <Config Name="MQTT command topic name" Target="MQTT_COMMAND_TOPIC_NAME" Default="cmnd/rika2mqtt" Mode="" Description="The topic used to send command to RIKA2MQTT." Type="Variable" Display="advanced" Required="false" Mask="false">cmnd/rika2mqtt</Config>
+    <Config Name="MQTT URI Scheme" Target="MQTT_URI_SCHEME" Default="tcp://" Mode="" Description="The uri scheme to use to connect to MQTT" Type="Variable" Display="advanced" Required="false" Mask="false">tcp://</Config>
+</Container>
