@@ -2,6 +2,14 @@
 <Container version="2">
     <Name>RIKA2MQTT</Name>
     <Repository>cookiecodedev/rika2mqtt</Repository>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Latest builds (unstable)</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>stable</Tag>
+        <TagDescription>Stable releases only</TagDescription>
+    </Branch>
     <Registry>https://hub.docker.com/r/cookiecodedev/rika2mqtt</Registry>
     <Network>bridge</Network>
     <MyIP/>
@@ -19,8 +27,8 @@
     <PostArgs/>
     <CPUset/>
     <DateInstalled>1693728389</DateInstalled>
-    <DonateText/>
-    <DonateLink/>
+    <DonateText>Donations</DonateText>
+    <DonateLink>https://ko-fi.com/sebastienvermeille</DonateLink>
     <Requires/>
     <Config Name="RIKA Firenet email" Target="RIKA_EMAIL" Default="" Mode="" Description="Your rika-firenet.com account email" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="RIKA Firenet password" Target="RIKA_PASSWORD" Default="" Mode="" Description="Your rika-firenet.com account password" Type="Variable" Display="always" Required="true" Mask="true"/>
