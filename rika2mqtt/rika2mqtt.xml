@@ -3,12 +3,12 @@
     <Name>RIKA2MQTT</Name>
     <Repository>cookiecodedev/rika2mqtt</Repository>
     <Branch>
-        <Tag>latest</Tag>
-        <TagDescription>Latest builds (unstable)</TagDescription>
-    </Branch>
-    <Branch>
         <Tag>stable</Tag>
         <TagDescription>Stable releases only</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Latest builds (unstable)</TagDescription>
     </Branch>
     <Registry>https://hub.docker.com/r/cookiecodedev/rika2mqtt</Registry>
     <Network>bridge</Network>
