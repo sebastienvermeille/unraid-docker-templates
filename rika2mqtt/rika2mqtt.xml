@@ -37,6 +37,7 @@
     <Config Name="MQTT username" Target="MQTT_USERNAME" Default="" Mode="" Description="If your mqtt server allow anonymous access leave empty" Type="Variable" Display="always" Required="false" Mask="false"/>
     <Config Name="MQTT password" Target="MQTT_PASSWORD" Default="" Mode="" Description="If your mqtt server allow anonymous access leave empty" Type="Variable" Display="always" Required="false" Mask="true"/>
     <Config Name="MQTT telemetry topic name" Target="MQTT_TELEMETRY_REPORT_TOPIC_NAME" Default="tele/rika2mqtt" Mode="" Description="The topic used by RIKA2MQTT to publish RIKA status" Type="Variable" Display="advanced" Required="false" Mask="false">tele/rika2mqtt</Config>
+    <Config Name="MQTT notification topic name" Target="MQTT_NOTIFICATION_TOPIC_NAME" Default="tele/rika2mqtt-notifications" Mode="" Description="The topic used by RIKA2MQTT to publish notifications (RIKA errors etc)" Type="Variable" Display="advanced" Required="false" Mask="false">tele/rika2mqtt-notifications</Config>
     <Config Name="MQTT command topic name" Target="MQTT_COMMAND_TOPIC_NAME" Default="cmnd/rika2mqtt" Mode="" Description="The topic used to send command to RIKA2MQTT." Type="Variable" Display="advanced" Required="false" Mask="false">cmnd/rika2mqtt</Config>
     <Config Name="MQTT URI Scheme" Target="MQTT_URI_SCHEME" Default="tcp://" Mode="" Description="The uri scheme to use to connect to MQTT" Type="Variable" Display="advanced" Required="false" Mask="false">tcp://</Config>
 </Container>
